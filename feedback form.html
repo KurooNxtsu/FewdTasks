@@ -1,54 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .submit-btn {
-            margin-top: 15px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        .submit-btn:hover {
-            background-color: #218838;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <h2>Feedback Form</h2>
@@ -62,7 +21,7 @@
             <label for="phone">Phone (Optional)</label>
             <input type="tel" id="phone" name="phone">
 
-            <label for="rating">Rating</label>
+            <label for="rating">Rating <span class="required">*</span></label>
             <select id="rating" name="rating" required>
                 <option value="">Select Rating</option>
                 <option value="1">1 - Poor</option>
@@ -72,7 +31,7 @@
                 <option value="5">5 - Excellent</option>
             </select>
 
-            <label for="questions">Any Questions Regarding Product or Service</label>
+            <label for="questions">Any Questions Regarding Product or Service <span class="required">*</span></label>
             <textarea id="questions" name="questions" rows="4" required></textarea>
 
             <label for="comments">Additional Comments (Optional)</label>
@@ -82,4 +41,5 @@
         </form>
     </div>
 </body>
+
 </html>
